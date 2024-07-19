@@ -11,6 +11,7 @@ pipeline {
 					checkout scm
 					sh 'echo ${BUILD_TIMESTAMP}'
 					sh 'docker login -u surbhikharche -p ${DOCKERHUB_PASS_PSW}'
+					sh 'mvn clean package'
 					def customImage = docker.build("surbhikharche/hw3-springboot-app:${BUILD_TIMESTAMP}")
 				}
 			}
