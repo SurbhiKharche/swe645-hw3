@@ -48,7 +48,17 @@ public class StudentServiceImpl implements StudentService {
 		existingStudent.setFirstName(student.getFirstName());
 		existingStudent.setLastName(student.getLastName());
 		existingStudent.setEmail(student.getEmail());
-		
+		existingStudent.setCity(student.getCity());
+		existingStudent.setDateOfSurvey(student.getDateOfSurvey());
+		existingStudent.setId(student.getId());
+		existingStudent.setInterestSource(student.getInterestSource());
+		existingStudent.setLikedMost(student.getLikedMost());
+		existingStudent.setRecommendationLikelihood(student.getRecommendationLikelihood());
+		existingStudent.setState(student.getState());
+		existingStudent.setStreetAddress(student.getStreetAddress());
+		existingStudent.setTelephoneNumber(student.getTelephoneNumber());
+		existingStudent.setZip(student.getZip());
+
 		studentRepository.save(existingStudent);
 		return existingStudent;
 	}
